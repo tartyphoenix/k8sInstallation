@@ -1,0 +1,138 @@
+spawn scp /etc/hosts root@172.17.183.17:/etc/hosts
+root@172.17.183.17's password: 
+hosts                                                                                           0%    0     0.0KB/s   --:-- ETAhosts                                                                                         100%   82   414.4KB/s   00:00    
+spawn ssh root@172.17.183.17
+root@172.17.183.17's password: 
+Last login: Sat Oct 27 10:27:11 2018 from 172.17.183.17
+
+Welcome to Alibaba Cloud Elastic Compute Service !
+
+[root@master ~]# rm -rf /root/.ssh/authorized_keys
+[root@master ~]# touch /root/.ssh/authorized_keys
+[root@master ~]# chmod 600 /root/.ssh/authorized_kyes
+chmod: cannot access ‘/root/.ssh/authorized_kyes’: No such file or directory
+[root@master ~]# hostnamectl set-hostname master
+[root@master ~]# cd /root/.ssh
+[root@master .ssh]# rm -rf id_rsa.pub id_rsa
+[root@master .ssh]# ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:JP5UDpVKWd1ANn+pkOnqwmGiDoOu9iKYB2ELO2SMqe4 root@master
+The key's randomart image is:
++---[RSA 2048]----+
+|         oo+=o   |
+|        o...+o. .|
+|o.    ..o..+  ...|
+|==   . o.+. . .. |
+|*o.   . S .. .   |
+|*.   . =  .      |
+|+*  . + o.       |
+|=++.   o.        |
+|*E+o    ..       |
++----[SHA256]-----+
+[root@master .ssh]# exit
+logout
+Connection to 172.17.183.17 closed.
+spawn scp root@172.17.183.17:/root/.ssh/id_rsa.pub /root/id_rsa.pub
+root@172.17.183.17's password: 
+id_rsa.pub                                                                                      0%    0     0.0KB/s   --:-- ETAid_rsa.pub                                                                                    100%  393     1.4MB/s   00:00    
+spawn scp /etc/hosts root@172.17.183.16:/etc/hosts
+root@172.17.183.16's password: 
+hosts                                                                                           0%    0     0.0KB/s   --:-- ETAhosts                                                                                         100%   82   212.0KB/s   00:00    
+spawn ssh root@172.17.183.16
+root@172.17.183.16's password: 
+Last login: Sat Oct 27 10:27:12 2018 from 172.17.183.17
+
+Welcome to Alibaba Cloud Elastic Compute Service !
+
+[root@node2 ~]# rm -rf /root/.ssh/authorized_keys
+[root@node2 ~]# touch /root/.ssh/authorized_keys
+[root@node2 ~]# chmod 600 /root/.ssh/authorized_kyes
+chmod: cannot access ‘/root/.ssh/authorized_kyes’: No such file or directory
+[root@node2 ~]# hostnamectl set-hostname node2
+[root@node2 ~]# cd /root/.ssh
+[root@node2 .ssh]# rm -rf id_rsa.pub id_rsa
+[root@node2 .ssh]# ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:sbdC0pYWCMUnzLTHwgqahJbeCIFyWtcMXHOOga/HW0I root@node2
+The key's randomart image is:
++---[RSA 2048]----+
+|o  .o%* .        |
+|+.+ +oBX.        |
+|+B.. .*o*        |
+|*oo. .E+ =       |
+|oo ..+. S .      |
+|    . +=.. .     |
+|     . +. .      |
+|      .  .       |
+|                 |
++----[SHA256]-----+
+[root@node2 .ssh]# exit
+logout
+Connection to 172.17.183.16 closed.
+spawn scp root@172.17.183.16:/root/.ssh/id_rsa.pub /root/id_rsa.pub
+root@172.17.183.16's password: 
+id_rsa.pub                                                                                      0%    0     0.0KB/s   --:-- ETAid_rsa.pub                                                                                    100%  392   810.4KB/s   00:00    
+spawn scp /etc/hosts root@172.17.183.18:/etc/hosts
+root@172.17.183.18's password: 
+hosts                                                                                           0%    0     0.0KB/s   --:-- ETAhosts                                                                                         100%   82   277.6KB/s   00:00    
+spawn ssh root@172.17.183.18
+root@172.17.183.18's password: 
+Last login: Sat Oct 27 10:27:33 2018 from 172.17.183.17
+
+Welcome to Alibaba Cloud Elastic Compute Service !
+
+[root@node1 ~]# rm -rf /root/.ssh/authorized_keys
+[root@node1 ~]# touch /root/.ssh/authorized_keys
+[root@node1 ~]# chmod 600 /root/.ssh/authorized_kyes
+chmod: cannot access ‘/root/.ssh/authorized_kyes’: No such file or directory
+[root@node1 ~]# hostnamectl set-hostname node1
+[root@node1 ~]# cd /root/.ssh
+[root@node1 .ssh]# rm -rf id_rsa.pub id_rsa
+[root@node1 .ssh]# ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:xcRDDKHzKsOBetuVDW+tXbCYRlCVdYApAM7R55ZMRqs root@node1
+The key's randomart image is:
++---[RSA 2048]----+
+|    oo.o=B+=o..  |
+|   o ..o=+B  .   |
+|    o +*.oo.     |
+|   .   ==.       |
+|  . . E.S .      |
+| . . . B + o     |
+|. . + + B o .    |
+| . o + o o .     |
+|  . .   . .      |
++----[SHA256]-----+
+[root@node1 .ssh]# exit
+logout
+Connection to 172.17.183.18 closed.
+spawn scp root@172.17.183.18:/root/.ssh/id_rsa.pub /root/id_rsa.pub
+root@172.17.183.18's password: 
+id_rsa.pub                                                                                      0%    0     0.0KB/s   --:-- ETAid_rsa.pub                                                                                    100%  392   869.3KB/s   00:00    
+spawn scp /root/authen.pub root@172.17.183.17:/root/.ssh/authorized_keys
+root@172.17.183.17's password: 
+authen.pub                                                                                      0%    0     0.0KB/s   --:-- ETAauthen.pub                                                                                    100% 1177     4.2MB/s   00:00    
+spawn scp /root/authen.pub root@172.17.183.16:/root/.ssh/authorized_keys
+root@172.17.183.16's password: 
+authen.pub                                                                                      0%    0     0.0KB/s   --:-- ETAauthen.pub                                                                                    100% 1177     2.7MB/s   00:00    
+spawn scp /root/authen.pub root@172.17.183.18:/root/.ssh/authorized_keys
+root@172.17.183.18's password: 
+authen.pub                                                                                      0%    0     0.0KB/s   --:-- ETAauthen.pub                                                                                    100% 1177     3.3MB/s   00:00    
